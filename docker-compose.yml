@@ -1,0 +1,69 @@
+version: '3'
+
+volumes:
+  dbdata:
+    driver: local
+
+services:
+
+### APP: Application server #########################################
+    app:
+      build:
+        context: ./
+        dockerfile: docker/app/Dockerfile
+        args:
+          - DOCKER_APP_UID=${DOCKER_APP_UID:-1000}
+      working_dir: /var/www
+      volumes:
+        - ./:/var/www
+      environment:
+        DB_HOST: database
+        DB_DATABASE: homestead
+        DB_USERNAME: homestead
+        DB_PASSWORD: secret
+        REDIS_HOST: redis
+      ports:
+        - "9000:9000"
+      depends_on:
+        - database
+
+### WEB: Web server #################################################
+    web:
+      build:
+        context: ./
+        dockerfile: docker/web/Dockerfile
+        args:
+          - DOCKER_APP_UID=${DOCKER_APP_UID:-1000}
+      volumes:
+        - ./:/var/www:ro
+      ports:
+        - "80:80"
+        - "443:443"
+      depends_on:
+        - app
+
+### DATABASE: Database server #######################################
+    database:
+      image: mysql:5
+      volumes:
+            - dbdata:/var/lib/mysql
+      environment:
+        MYSQL_ROOT_PASSWORD: verysecret
+        MYSQL_DATABASE: homestead
+        MYSQL_USER: homestead
+        MYSQL_PASSWORD: secret
+      ports:
+        - "3306:3306"
+
+### REDIS: Redis server #############################################
+    redis:
+      image: redis:5
+      ports:
+        - "6379:6379"
+
+### REDIS: Redis server #############################################
+    mailhog:
+      image: mailhog/mailhog:latest
+      ports:
+        - "1025:1025"
+        - "8025:8025"
