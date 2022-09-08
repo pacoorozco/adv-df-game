@@ -44,6 +44,7 @@ return [
     'my_achievements' => 'My Achievements',
     'play' => 'Play',
     'admin_area' => 'Go to admin area',
+    'leaderboard' => 'Leaderboard',
 
     'dataTablesLang' => 'English',
     'dateTimePickerLang' => 'en',

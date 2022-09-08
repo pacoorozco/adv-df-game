@@ -23,37 +23,16 @@
  * @link               https://github.com/pacoorozco/gamify-laravel
  */
 
-namespace Database\Factories;
+namespace Gamify\Http\Controllers;
 
-use Gamify\Enums\BadgeActuators;
-use Illuminate\Database\Eloquent\Factories\Factory;
+use Gamify\Libs\Game\Game;
+use Illuminate\View\View;
 
-class BadgeFactory extends Factory
+class LeaderBoardController extends Controller
 {
-    public function definition(): array
+    public function __invoke(): View
     {
-        $color = $this->faker->unique()->safeColorName;
-
-        return [
-            'name' => $color,
-            'description' => 'This badge is for people who think about '.$color.' :D',
-            'required_repetitions' => 5,
-            'active' => $this->faker->boolean,
-            'actuators' => $this->faker->randomElement(BadgeActuators::getValues()),
-        ];
-    }
-
-    public function active(): Factory
-    {
-        return $this->state(fn () => [
-            'active' => true,
-        ]);
-    }
-
-    public function inactive(): Factory
-    {
-        return $this->state(fn () => [
-            'active' => false,
-        ]);
+        return view('leaderboard.index')
+            ->with('usersInRanking', Game::getTopExperiencedPlayers());
     }
 }
