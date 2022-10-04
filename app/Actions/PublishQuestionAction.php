@@ -23,43 +23,18 @@
  * @link               https://github.com/pacoorozco/gamify-laravel
  */
 
-namespace Gamify\Console;
+namespace Gamify\Actions;
 
-use Gamify\Console\Commands\PublishScheduledQuestions;
-use Illuminate\Console\Scheduling\Schedule;
-use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
+use Gamify\Exceptions\QuestionPublishingException;
+use Gamify\Models\Question;
 
-class Kernel extends ConsoleKernel
+final class PublishQuestionAction
 {
     /**
-     * The Artisan commands provided by your application.
-     *
-     * @var array
+     * @throws QuestionPublishingException
      */
-    protected $commands = [
-        //
-    ];
-
-    /**
-     * Define the application's command schedule.
-     *
-     * @param  \Illuminate\Console\Scheduling\Schedule  $schedule
-     * @return void
-     */
-    protected function schedule(Schedule $schedule)
+    public function execute(Question $question): void
     {
-        $schedule->command(PublishScheduledQuestions::class)->hourly();
-    }
-
-    /**
-     * Register the commands for the application.
-     *
-     * @return void
-     */
-    protected function commands()
-    {
-        $this->load(__DIR__.'/Commands');
-
-        require base_path('routes/console.php');
+        $question->publish();
     }
 }
