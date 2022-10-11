@@ -10,7 +10,7 @@
                  alt="oktoDATAFest 2022">
 
             <div class="carousel-caption">
-                The <strong>best DF offisite</strong> of the last two years.
+                The <strong>best DF offsite</strong> of the last two years.
             </div>
         </div>
         <div class="item">
@@ -18,7 +18,7 @@
                  alt="Second slide">
 
             <div class="carousel-caption">
-                The <strong>unique offisite</strong> of the last two years.
+                The <strong>only offsite</strong> of the last two years.
             </div>
         </div>
         <div class="item">
@@ -26,7 +26,7 @@
                  alt="Third slide">
 
             <div class="carousel-caption">
-                The only one
+                If you read that, yoi should <a href="#">click here</a>.
             </div>
         </div>
     </div>
