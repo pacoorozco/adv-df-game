@@ -26,7 +26,7 @@
                  alt="Third slide">
 
             <div class="carousel-caption">
-                If you read that, yoi should <a href="#">click here</a>.
+                If you read that, yoi should <a href="//thegame.mpi-internal.com/questions/site-the-hidden-path">click here</a>.
             </div>
         </div>
     </div>
