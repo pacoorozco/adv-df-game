@@ -11,7 +11,6 @@ package-lock.json
 /storage/*.key
 /storage/debugbar
 /test-coverage
-/resources/views/custom/*
 /dist
 .env
 .env.backup
