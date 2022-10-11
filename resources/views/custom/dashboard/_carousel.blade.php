@@ -10,23 +10,23 @@
                  alt="oktoDATAFest 2022">
 
             <div class="carousel-caption">
-                First Slide
+                The <strong>best DF offisite</strong> of the last two years.
             </div>
         </div>
         <div class="item">
-            <img src="//via.placeholder.com/900x500.jpg/3c8dbc/ffffff&text=I+Love+gamify+v3"
+            <img src="//via.placeholder.com/900x500.jpg/3c8dbc/ffffff&text=oktoDATAfest+2022"
                  alt="Second slide">
 
             <div class="carousel-caption">
-                Second Slide
+                The <strong>unique offisite</strong> of the last two years.
             </div>
         </div>
         <div class="item">
-            <img src="//via.placeholder.com/900x500.jpg/f39c12/ffffff&text=I+Love+gamify+v3"
+            <img src="//via.placeholder.com/900x500.jpg/f39c12/ffffff&text=oktoDATAfest+2022"
                  alt="Third slide">
 
             <div class="carousel-caption">
-                Third Slide
+                The only one
             </div>
         </div>
     </div>
