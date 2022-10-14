@@ -30,8 +30,8 @@
                         the streets were empty and the memories of these offsites faded away.</p>
                     <p>But not completely, a tribe with a lot, <strong>a lot of data</strong> made millions of 
                     queries, searched inside billions of images, used Image recognition to identify faster, ran
-                    thousands of experiments, millions of clusters were spawned and millions of curated datasets 
-                    were analysed to find the truth, that <strong>the legend was real</strong>.</p>
+		    thousands of experiments, millions of clusters were spawned and millions of curated datasets 
+		    were created and analysed to find the truth, that <strong>the legend was real</strong>.</p>
                     <p>So they decided on continuing this tradition and making our <strong>first OktoDATAfest</strong>.</p>
                     <p>Are you ready to test your knowledge about our tribe?</p>
                 </div>
