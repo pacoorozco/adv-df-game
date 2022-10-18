@@ -61,7 +61,7 @@
 
     <div class="row">
         <div class="col-md-6">
-            <div class="box">
+            <div class="box box-danger">
                 <div class="box-body">
                     <div class="jumbotron">
                         <h1>Challenge #1</h1>
@@ -73,7 +73,7 @@
         </div>
 
         <div class="col-md-6">
-            <div class="box">
+            <div class="box box-danger">
                 <div class="box-body">
                     <div class="jumbotron">
                         <h1>Challenge #2</h1>
